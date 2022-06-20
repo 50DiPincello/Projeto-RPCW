@@ -1,0 +1,4 @@
+3 atores
+-> produtor (ingestão) : SIP (BagIt) => AIP
+-> consumidor (disseminação) <= DIP
+-> admin (administração)

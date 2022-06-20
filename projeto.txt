@@ -1,0 +1,45 @@
+REPOSITÓRIO DE MATERIAIS DIDATICOS
+
+arq: Arquitetura e pilha techológica
+
+Persistencia:
+	file system
+	mongodb
+		utilizadores: admin, produtor (so nao pode remover), consumidor
+			autenticação: username + password --> JWT (payload: username + perfil
+										 outros campos
+										 assinatura)
+
+API: nodejs + express
+
+Frontend: html + css + js
+
+Requisitos:
+
+	SIP (pacotes que entram (pelo produtor) -> submission):
+		manifesto: Bagit
+		pdf ou xml(associado a um schema)
+		metainformaçao:
+			titulo
+			data de criação
+			data de submissão
+			criador
+			quem submeteu (papel de produtor)
+
+	AIP:
+		metadados em mongodb
+		ficheiros no file system com política de armazenamento
+
+	DIP (pacotes que saiem para o consumidor):
+		consulta online para formatos "conhecidos"
+		download para os restantes
+
+Deployment:
+	docker-compose
+		-Docker files
+	(docker run -d -p minha:interna --name container__name -v /myfs:/data)
+
+Sistema ranking: utilizadores classificam o conteúdo
+Sistema de comentários (extra): qualquer user pode comentar, admin pode apagar
+	
+
